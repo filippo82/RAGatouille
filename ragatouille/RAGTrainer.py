@@ -194,7 +194,7 @@ class RAGTrainer:
             warmup=int(total_triplets // batch_size * 0.1)
             if warmup_steps == "auto"
             else warmup_steps,
-            save_every=int(total_triplets // batch_size // 10),
+            save_every=int(total_triplets // batch_size // 1),
         )
 
         return self.model.train(data_dir=self.data_dir, training_config=training_config)
