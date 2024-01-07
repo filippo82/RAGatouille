@@ -53,7 +53,7 @@ class ColBERT(LateInteractionModel):
             self.index_name = index_name
 
         self.run_context = Run().context(self.run_config)
-        self.run_context.__enter__()  # Manually enter the context
+        #self.run_context.__enter__()  # Manually enter the context
         self.searcher = None
 
     def _update_index(self, new_documents: list[str], searcher: Searcher):
